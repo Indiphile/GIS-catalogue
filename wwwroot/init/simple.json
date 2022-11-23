@@ -1,0 +1,70 @@
+{
+    "homeCamera": {
+        "north": -24,
+        "east": 33.5,
+        "south": -32.5,
+        "west": 16
+    },
+    "baseMapName": "Positron (Light)",
+    "viewerMode": "2d",
+    "catalog": [
+        {
+            "name": "Terrian",
+            "type": "group",
+            "members": [
+                {
+                    "name": "DTM 20 M",
+                    "type": "wms",
+                    "url": "http://localhost:8080/geoserver/gis_workspace/wms",
+                    "layers": "gis_workspace:DTM_20M"
+                },
+                {
+                    "type": "wms",
+                    "name": "District Municipality",
+                    "url": "http://localhost:8080/geoserver/gis_workspace/wms",
+                    "layers": "gis_workspace:hillshade"
+                }
+            ]
+        },
+        {
+            "name": "Satellite Imagery",
+            "type": "group",
+            "members": [
+                {
+                    "name": "landcover",
+                    "type": "wms",
+                    "url": "http://localhost:8080/geoserver/gis_workspace/wms",
+                    "layers": "gis_workspace:landcover"
+                }
+            ]
+        },
+        {
+            "name": "Catchment",
+            "type": "wms",
+            "url": "http://localhost:8080/geoserver/gis_workspace/wms",
+            "layers": "gis_workspace:catchments"
+        },
+        {
+            "name": "Rivers",
+            "type": "wms",
+            "url": "http://localhost:8080/geoserver/gis_workspace/wms",
+            "layers": "gis_workspace:rivers"
+        },
+        {
+            "name": "Roads",
+            "type": "wms",
+            "url": "http://localhost:8080/geoserver/gis_workspace/wms",
+            "layers": "gis_workspace:roads"
+        },
+        {
+            "name": "Places",
+            "type": "wms",
+            "url": "http://localhost:8080/geoserver/gis_workspace/wms",
+            "layers": "gis_workspace:places"
+        }
+    
+    
+    ],
+    "baseMapId": "basemap-bing-aerial-with-labels",
+    "previewBaseMapId": "basemap-positron"
+}
